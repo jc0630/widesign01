@@ -49,11 +49,10 @@ export default function Layout() {
       </header>
 
       <button 
-        className="menu-toggle" 
+        className={`menu-toggle ${menuOpen ? 'open' : ''}`} 
         id="menuToggle" 
         aria-label="開啟選單"
         onClick={() => setMenuOpen(!menuOpen)}
-        style={{ display: 'none' }} // Hidden on desktop, shown on mobile via CSS
       >
         <span></span><span></span><span></span>
       </button>
@@ -64,8 +63,8 @@ export default function Layout() {
 
       <section className="cta" id="contact">
         <div className="eyebrow" style={{ justifyContent: 'center', color: 'rgba(242,242,239,.7)' }}>GET IN TOUCH</div>
-        <h2>準備好，開始一場<br/>關於空間的對話了嗎？</h2>
-        <p>歡迎與我們預約諮詢，讓專業團隊為您的生活提出最合適的設計提案。</p>
+        <h2>準備好，開始一場<br className="hidden md:block"/>關於空間的對話了嗎？</h2>
+        <p className="px-4 text-sm md:text-base">歡迎與我們預約諮詢，讓專業團隊為您的生活提出最合適的設計提案。</p>
         <Link to="/contact" className="cta-btn">聯絡我們 →</Link>
       </section>
 

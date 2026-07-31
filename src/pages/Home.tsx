@@ -42,7 +42,7 @@ export default function Home() {
         <div className="hero-content" style={{ position: 'relative', zIndex: 2, width: '100%', padding: '0 clamp(24px, 6vw, 110px) 80px', color: '#fff' }}>
           <div className="eyebrow" style={{ color: 'rgba(255,255,255,.85)' }}>WI DESIGN — INTERIOR DESIGN STUDIO</div>
           <h1 className="opacity-0 animate-[heroText_1.1s_0.3s_cubic-bezier(0.16,0.8,0.3,1)_forwards]" style={{ fontSize: 'clamp(2.2rem, 5.4vw, 4.6rem)', color: '#fff', marginTop: '22px', maxWidth: '16em' }}>
-            空間，是生活哲學<br/>的具體實踐。
+            空間，是生活哲學<br className="hidden md:block"/>的具體實踐。
           </h1>
           <div className="flex gap-4 mt-8 lg:mt-12 opacity-0 animate-[heroText_1.1s_0.6s_cubic-bezier(0.16,0.8,0.3,1)_forwards] relative z-10 pointer-events-auto">
             <button onClick={prevSlide} className="w-12 h-12 flex items-center justify-center border border-white/40 rounded-full hover:bg-white hover:text-black transition-colors backdrop-blur-sm" aria-label="上一張">

@@ -35,7 +35,7 @@ export default function Service() {
             <h2>流程總覽</h2>
           </div>
           
-          <div className="flow-scroll reveal reveal-delay-1" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch', scrollbarWidth: 'none', marginTop: '8px' }}>
+          <div className="flow-scroll reveal reveal-delay-1" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch', scrollbarWidth: 'none', marginTop: '8px', marginInline: 'calc(var(--gutter) * -1)' }}>
             <div className="flow-row" style={{ display: 'flex', alignItems: 'flex-start', width: 'max-content', padding: '20px var(--gutter) 10px' }}>
               
               {processFlow.map((step, idx) => {

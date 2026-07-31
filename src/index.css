@@ -261,10 +261,13 @@ nav.mainnav a.active::after {
   right: var(--gutter);
   z-index: 110;
   flex-direction: column;
-  gap: 5px;
+  gap: 6px;
   background: none;
   border: none;
   cursor: pointer;
+  padding: 10px;
+  margin-top: -10px;
+  margin-right: -10px;
 }
 
 .menu-toggle span {
@@ -272,7 +275,19 @@ nav.mainnav a.active::after {
   height: 1px;
   background: var(--ink);
   display: block;
-  transition: 0.3s;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s;
+}
+
+.menu-toggle.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 .section {
@@ -492,19 +507,49 @@ footer {
 }
 
 @media (max-width: 960px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px var(--gutter);
+  }
+
+  header.scrolled {
+    padding: 14px var(--gutter);
+  }
+
+  .logo {
+    text-align: left;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+  
+  .logo span {
+    margin-top: 0;
+  }
+
   nav.mainnav {
-    position: fixed;
-    inset: 0;
-    z-index: 105;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    z-index: -1;
     background: #fff;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 34px;
-    transform: translateY(-100%);
-    transition: transform 0.5s cubic-bezier(0.16, 0.8, 0.3, 1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.4s;
   }
   nav.mainnav.open {
+    opacity: 1;
+    visibility: visible;
     transform: translateY(0);
   }
   nav.mainnav a {
