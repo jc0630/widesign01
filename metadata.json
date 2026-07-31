@@ -1,0 +1,6 @@
+{
+  "name": "WI DESIGN 維雍設計",
+  "description": "維雍室內裝修設計官方網站，展現極簡與質感的空間美學。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
