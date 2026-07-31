@@ -33,7 +33,9 @@ export default function Layout() {
       <div className={`page-curtain ${isTransitioning ? '' : 'hidden'}`} id="pageCurtain"></div>
 
       <header id="siteHeader" className={scrolled ? 'scrolled' : ''}>
-        <Link to="/" className="logo">維雍室內裝修設計<span>WI DESIGN</span></Link>
+        <Link to="/" className="logo">
+          <img src="/logo.png" alt="WI DESIGN 維雍室內裝修設計" className="h-6 md:h-8 w-auto" />
+        </Link>
         <nav className={`mainnav ${menuOpen ? 'open' : ''}`} id="mainNav">
           {navLinks.map(link => (
             <Link 
@@ -70,7 +72,9 @@ export default function Layout() {
 
       <footer>
         <div className="footer-top">
-          <div className="footer-logo">維雍室內裝修設計有限公司</div>
+          <div className="footer-logo">
+            <img src="/logo.png" alt="WI DESIGN 維雍室內裝修設計" />
+          </div>
           <div className="footer-nav">
             {navLinks.map(link => (
               <Link 

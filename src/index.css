@@ -367,10 +367,10 @@ nav.mainnav a.active::after {
 
 /* Footer */
 footer {
-  background: var(--dark);
-  color: var(--dark-soft);
+  background: #ffffff;
+  color: var(--ink-soft);
   padding: 50px var(--gutter) 34px;
-  border-top: 1px solid rgba(242, 242, 239, 0.12);
+  border-top: 1px solid var(--line-strong);
 }
 
 .footer-top {
@@ -384,9 +384,16 @@ footer {
 
 .footer-logo {
   font-family: 'Noto Serif TC', serif;
-  color: #f2f2ef;
+  color: var(--ink);
   font-size: 1.05rem;
   letter-spacing: 0.1em;
+  display: flex;
+  align-items: center;
+}
+
+.footer-logo img {
+  height: 38px;
+  width: auto;
 }
 
 .footer-nav {
@@ -397,15 +404,16 @@ footer {
 
 .footer-nav a {
   font-size: 0.84rem;
+  color: var(--ink-soft);
 }
 
 .footer-nav a:hover {
-  color: #f2f2ef;
+  color: var(--ink);
 }
 
 .footer-nav a.current,
 .footer-nav a.active {
-  color: #f2f2ef;
+  color: var(--ink);
 }
 
 .footer-bottom {
@@ -414,8 +422,9 @@ footer {
   flex-wrap: wrap;
   gap: 12px;
   padding-top: 22px;
-  border-top: 1px solid rgba(242, 242, 239, 0.12);
+  border-top: 1px solid var(--line-strong);
   font-size: 0.76rem;
+  color: var(--ink-faint);
 }
 
 /* Lightbox overlay */
