@@ -34,7 +34,7 @@ export default function Layout() {
 
       <header id="siteHeader" className={scrolled ? 'scrolled' : ''}>
         <Link to="/" className="logo">
-          <img src="/logo.png" alt="WI DESIGN 維雍室內裝修設計" className="h-6 md:h-8 w-auto" />
+          <img src="/logo.png" alt="WI DESIGN 維雍室內裝修設計" />
         </Link>
         <nav className={`mainnav ${menuOpen ? 'open' : ''}`} id="mainNav">
           {navLinks.map(link => (
